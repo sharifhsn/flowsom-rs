@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "flowsom-rs"
+version = "0.1.0"
+description = "Rust-accelerated batch-learning SOM for FlowSOM"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24"]
+readme = "README.md"
+keywords = ["flowsom", "som", "self-organizing-map", "flow-cytometry", "bioinformatics"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Repository = "https://github.com/sharifhsn/flowsom-rs"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
